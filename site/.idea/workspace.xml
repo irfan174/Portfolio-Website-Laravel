@@ -162,7 +162,9 @@
       <option name="presentableId" value="Default" />
       <updated>1590172366866</updated>
       <workItem from="1590172382033" duration="3427000" />
-      <workItem from="1590248422125" duration="9813000" />
+      <workItem from="1590248422125" duration="10412000" />
+      <workItem from="1590341280935" duration="1183000" />
+      <workItem from="1590673933657" duration="6285000" />
     </task>
     <servers />
   </component>
@@ -182,10 +184,14 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="635" y="352" key="NewPhpFileDialog" timestamp="1590250891755">
+    <state x="685" y="291" key="#Notifications" timestamp="1590679889511">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="635" y="352" key="NewPhpFileDialog/0.0.1600.860@0.0.1600.860" timestamp="1590250891755" />
+    <state x="685" y="291" key="#Notifications/0.0.1600.860@0.0.1600.860" timestamp="1590679889511" />
+    <state x="635" y="352" key="NewPhpFileDialog" timestamp="1590678591133">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="635" y="352" key="NewPhpFileDialog/0.0.1600.860@0.0.1600.860" timestamp="1590678591133" />
     <state x="301" y="60" key="SettingsEditor" timestamp="1590250159452">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
