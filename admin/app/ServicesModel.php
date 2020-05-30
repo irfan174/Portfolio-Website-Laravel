@@ -12,3 +12,4 @@ class ServicesModel extends Model
     public $keyType='int';
     public  $timestamps=false;
 }
+

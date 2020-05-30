@@ -53,3 +53,23 @@
   getServiceJsonData();
 </script>
 @endsection
+
+<!-- Modal -->
+<div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="            exampleModalCenterTitle"aria-hidden="true">
+
+  <!-- Add .modal-dialog-centered to .modal-dialog to vertically center the modal -->
+  <div class="modal-dialog modal-dialog-centered" role="document">
+
+
+    <div class="modal-content">
+      <div class="modal-body text-center">
+        <h4>Want to Delete?</h4>
+        <h4 id="serviceDltId">  </h4>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-sm btn-primary" data-dismiss="modal">No</button>
+        <button id="serviceDltConfirmBtn" type="button" class="btn btn-sm btn-danger">Yes</button>
+      </div>
+    </div>
+  </div>
+</div>
