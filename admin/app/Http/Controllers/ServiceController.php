@@ -12,28 +12,28 @@ class ServiceController extends Controller
 		return view('Services');
     }
 
-
-    function getServiceData(){
+	function getServiceData(){
 		$allServiceData = json_encode(ServicesModel::all());
 		return $allServiceData;
     }
-
-
-    function ServiceDelete(Request $request){
+	//service delete function
+	function ServiceDelete(Request $request){
     	$deleteId = $request->input('id');
     	$deleteQuery = ServicesModel::where('id','=',$deleteId)->delete();
     	if($deleteQuery == true)
     	{
     		return 1;
-
-    	}
-    	else{
+		}
+    	else
+    	{
     		return 0;
-
     	}
-
+    }
+    //get all details [all coloumns] of each data for edit service
+    function getServiceDetailsData(Request $request){
+    	$editId = $request->input('id');
+    	$editQuery = json_encode(ServicesModel::where('id','=',$editId)->get()) ;
+    	return $editQuery;
 
     }
-
-    
 }
