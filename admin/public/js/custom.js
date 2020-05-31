@@ -61,12 +61,15 @@ function getServiceJsonData() {
 
 //ajax call for delete service
 function serviceDelete(deleteId) {
+  $('#serviceDltConfirmBtn').html("<div class='spinner-border spinner-border-sm' role='status'></div>");//set animation on yes button of delete modal
+
 
     axios.post('/servicedelete', {
             id: deleteId
         })
         .then(function(response) {
-
+          $('#serviceDltConfirmBtn').html("Yes");
+          if(response.status == 200){
             if (response.data == 1) 
             {
                 $('#deleteModal').modal('hide');
@@ -76,11 +79,22 @@ function serviceDelete(deleteId) {
             else 
             {
                 $('#deleteModal').modal('hide');
-                //getServiceJsonData();
                 toastr.error('Delete Failed');
+                getServiceJsonData();
             }
+
+          }
+          else{
+            $('#deleteModal').modal('hide');
+            toastr.error('Something Went Wrong!!!');
+
+          }
+
+            
         })
         .catch(function(error) {
+          $('#deleteModal').modal('hide');
+            toastr.error('Something Went Wrong!!!');
         })
 
 
@@ -145,6 +159,7 @@ if(serName.length == 0){
 
   }
   else{
+    $('#serviceEditConfirmBtn').html("<div class='spinner-border spinner-border-sm' role='status'></div>");//set animation on save button of edit modal
     axios.post('/serviceupdate', {
             id: updateId,
             name: serName,
@@ -153,7 +168,10 @@ if(serName.length == 0){
 
         })
         .then(function(response) {
-          if (response.data == 1) 
+
+          $('#serviceEditConfirmBtn').html("Save");
+          if(response.status == 200){
+            if (response.data == 1) 
             {
                 $('#editModal').modal('hide');
                 toastr.success('Update Successfull');
@@ -162,9 +180,21 @@ if(serName.length == 0){
             else 
             {
                 $('#editModal').modal('hide');
-                //getServiceJsonData();
+                
                 toastr.error('Update Failed');
+                getServiceJsonData();
             }
+
+
+          }
+          else{
+            $('#editModal').modal('hide');
+            toastr.error('Something Went Wrong!!!');
+
+          }
+
+
+          
           
         })
         .catch(function(error) {
