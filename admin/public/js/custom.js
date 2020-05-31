@@ -21,18 +21,14 @@ function getServiceJsonData() {
                         "<td><a class='serviceEditIcon' data-id=" + serviceDataJson[i].id + "><i class='fas fa-edit'></i></a></td>" +
                         "<td><a class='serviceDltIcon' data-toggle='modal' data-id=" + serviceDataJson[i].id + " data-target='#deleteModal' ><i class='fas fa-trash-alt'></i></a></td>").appendTo('#serviceData_table');
                 });
-                // Delete icon hold and send the id of the clicked item to the modal 
+                //service section; Delete icon hold and send the id of the clicked item to the modal 
                 $('.serviceDltIcon').click(function() {
                     var catchId = $(this).data('id');
                     $('#serviceDltId').html(catchId);
                 })
-                //Yes button hold, get the id from the modal and send that id to the delete function
-                $('#serviceDltConfirmBtn').click(function() {
-
-                    var finalDltId = $('#serviceDltId').html();
-                    serviceDelete(finalDltId);
-                })
-                //Edit icon
+                
+                
+                //service section; Edit icon
                 $('.serviceEditIcon').click(function() {
                   
                     var catchIdEdit = $(this).data('id');
@@ -40,6 +36,7 @@ function getServiceJsonData() {
                     serviceDetailsForEdit(catchIdEdit);
                     $('#editModal').modal('show');
                 })
+                
 
             } 
             else 
@@ -55,6 +52,13 @@ function getServiceJsonData() {
 
         });
 }
+//service section; Yes button of delete modal hold, get the id from the modal and send that id to the delete function
+    $('#serviceDltConfirmBtn').click(function() {
+        var finalDltId = $('#serviceDltId').html();
+        serviceDelete(finalDltId);
+    })
+
+
 //ajax call for delete service
 function serviceDelete(deleteId) {
 
@@ -75,10 +79,8 @@ function serviceDelete(deleteId) {
                 //getServiceJsonData();
                 toastr.error('Delete Failed');
             }
-
         })
         .catch(function(error) {
-
         })
 
 
@@ -103,18 +105,73 @@ function serviceDetailsForEdit(detailsId) {
           else{
             $('#notFoundForEdit').removeClass('d-none');
             $('#loadingAnimForEdit').addClass('d-none');
-            
           }
-
-
-            
-
         })
         .catch(function(error) {
           $('#notFoundForEdit').removeClass('d-none');
           $('#loadingAnimForEdit').addClass('d-none');
+        });
+}
+
+
+//service section; save button of edit modal 
+                $('#serviceEditConfirmBtn').click(function() {
+
+                    var finalEditId = $('#serviceEditId').html();
+                    var finalEditName = $('#serviceNameId').val();
+                    var finalEditDes = $('#serviceDesId').val();
+                    var finalEditImg = $('#serviceImgId').val();
+                    /*alert(finalEditId);
+                    alert(finalEditName);
+                    alert(finalEditDes);
+                    alert(finalEditImg);*/
+                    serviceUpdate(finalEditId,finalEditName,finalEditDes,finalEditImg);
+                })
+
+
+//ajax call for Edit service
+function serviceUpdate(updateId,serName,serDes,serImg) {
+//validation 
+if(serName.length == 0){
+     toastr.error('Service Name not found');
+
+  }
+  else if(serDes.length == 0){
+    toastr.error('Service Description not found');
+
+  }
+  else if(serImg.length == 0){
+    toastr.error('Service Image not found');
+
+  }
+  else{
+    axios.post('/serviceupdate', {
+            id: updateId,
+            name: serName,
+            des: serDes,
+            img: serImg,
 
         })
+        .then(function(response) {
+          if (response.data == 1) 
+            {
+                $('#editModal').modal('hide');
+                toastr.success('Update Successfull');
+                getServiceJsonData();
+            } 
+            else 
+            {
+                $('#editModal').modal('hide');
+                //getServiceJsonData();
+                toastr.error('Update Failed');
+            }
+          
+        })
+        .catch(function(error) {
+          
+        });
 
+  }
 
+    
 }

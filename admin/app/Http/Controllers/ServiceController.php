@@ -36,4 +36,21 @@ class ServiceController extends Controller
     	return $editQuery;
 
     }
+    //service update function
+    function ServiceUpdate(Request $request){
+    	$updateId = $request->input('id');
+    	$serName = $request->input('name');
+    	$serDes = $request->input('des');
+    	$serImg = $request->input('img');
+
+    	$updateQuery = ServicesModel::where('id','=',$updateId)->update(['service_name'=>$serName,'	service_des'=>$serDes,'service_img'=>$serImg]);
+    	if($updateQuery == true)
+    	{
+    		return 1;
+		}
+    	else
+    	{
+    		return 0;
+    	}
+    }
 }
