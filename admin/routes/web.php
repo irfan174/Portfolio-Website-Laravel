@@ -18,3 +18,5 @@ Route::post('/servicedelete', 'ServiceController@ServiceDelete');
 Route::post('/servicedetails', 'ServiceController@getServiceDetailsData');
 
 Route::post('/serviceupdate', 'ServiceController@ServiceUpdate');
+
+Route::post('/serviceinsert', 'ServiceController@ServiceInsert');

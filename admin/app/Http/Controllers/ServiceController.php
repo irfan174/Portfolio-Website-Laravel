@@ -7,16 +7,17 @@ use App\ServicesModel;
 
 class ServiceController extends Controller
 {
+    //service section; service view
      function ServiceIndex(){
      	
 		return view('Services');
     }
-
+    //service section; get all data from database and send to custom.js in getServiceJsonData function
 	function getServiceData(){
 		$allServiceData = json_encode(ServicesModel::all());
 		return $allServiceData;
     }
-	//service delete function
+	//service section; service delete function
 	function ServiceDelete(Request $request){
     	$deleteId = $request->input('id');
     	$deleteQuery = ServicesModel::where('id','=',$deleteId)->delete();
@@ -29,21 +30,21 @@ class ServiceController extends Controller
     		return 0;
     	}
     }
-    //get all details [all coloumns] of each data for edit service
+    //service section; get all details [all coloumns] of each data for edit service
     function getServiceDetailsData(Request $request){
     	$editId = $request->input('id');
     	$editQuery = json_encode(ServicesModel::where('id','=',$editId)->get()) ;
     	return $editQuery;
 
     }
-    //service update function
-    function ServiceUpdate(Request $request){
+    //service section; service update function
+    function ServiceUpdate(Request $request){ 
     	$updateId = $request->input('id');
-    	$serName = $request->input('name');
-    	$serDes = $request->input('des');
-    	$serImg = $request->input('img');
+    	$name = $request->input('name');
+    	$des = $request->input('des');
+    	$img = $request->input('img');
 
-    	$updateQuery = ServicesModel::where('id','=',$updateId)->update(['service_name'=>$serName,'	service_des'=>$serDes,'service_img'=>$serImg]);
+    	$updateQuery = ServicesModel::where('id','=',$updateId)->update(['service_name'=>$name,'service_des'=>$des,'service_img'=>$img]);
     	if($updateQuery == true)
     	{
     		return 1;
@@ -52,5 +53,21 @@ class ServiceController extends Controller
     	{
     		return 0;
     	}
+    }
+    //service section; add new service function
+    function ServiceInsert(Request $request){
+        $name = $request->input('name');
+        $des = $request->input('des');
+        $img = $request->input('img');
+
+        $insertQuery = ServicesModel::insert(['service_name'=>$name,'service_des'=>$des,'service_img'=>$img]);
+        if($insertQuery == true)
+        {
+            return 1;
+        }
+        else
+        {
+            return 0;
+        }
     }
 }
