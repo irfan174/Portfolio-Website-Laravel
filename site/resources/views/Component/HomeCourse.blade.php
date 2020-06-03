@@ -15,4 +15,3 @@
         @endforeach
     </div>
 </div>
-

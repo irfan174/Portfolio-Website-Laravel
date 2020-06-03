@@ -20,10 +20,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1e36c0ad-9f64-47a3-a4cc-8b5c4b14df67" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/Component/HomeCourse.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../admin/resources/views/Layout/menu.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/../admin/resources/views/Layout/menu.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../admin/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/../admin/routes/web.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/Component/HomeService.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Component/HomeService.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/Component/HomeCourse.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Component/HomeCourse.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/Home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Home.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -178,6 +179,7 @@
       <workItem from="1591031033310" duration="2311000" />
       <workItem from="1591036542927" duration="930000" />
       <workItem from="1591114499164" duration="7589000" />
+      <workItem from="1591181848645" duration="705000" />
     </task>
     <servers />
   </component>

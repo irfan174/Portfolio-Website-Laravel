@@ -12,7 +12,7 @@ class ServiceController extends Controller
      	
 		return view('Services');
     }
-    //service section; get all data from database and send to custom.js in getServiceJsonData function
+    //service section; get all data from database and send to script section in getServiceJsonData function
 	function getServiceData(){
 		$allServiceData = json_encode(ServicesModel::all());
 		return $allServiceData;
