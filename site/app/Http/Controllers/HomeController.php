@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\VisitorModel;
 use App\ServicesModel;
+use App\CourseModel;
 class HomeController extends Controller
 {
     function HomeIndex(){
@@ -16,10 +17,13 @@ class HomeController extends Controller
 
         //services table data operation
         $ServicesData = json_decode( ServicesModel::all() );
+        $CourseData = json_decode(CourseModel::orderby('id','desc')->limit(6)->get()); //last theke 6 ta data nilam home page e show korar jonno
 
 
 
-        return view('Home', ['ServicesData'=> $ServicesData]);
+        return view('Home', [
+            'ServicesData'=> $ServicesData,
+            'CourseData'=>$CourseData]);
     }
 
 
