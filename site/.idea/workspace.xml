@@ -19,13 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1e36c0ad-9f64-47a3-a4cc-8b5c4b14df67" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/Component/HomeCourse.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/Component/HomeService.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Component/HomeService.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/Home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Home.blade.php" afterDir="false" />
-    </list>
+    <list default="true" id="1e36c0ad-9f64-47a3-a4cc-8b5c4b14df67" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -139,15 +133,12 @@
     </include_path>
   </component>
   <component name="ProjectId" id="1cH4pEsiTdyK1Y8LIde4GwekM74" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
-    <ConfirmationsSetting value="2" id="Add" />
-  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
-    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -175,9 +166,7 @@
       <workItem from="1590341280935" duration="1183000" />
       <workItem from="1590673933657" duration="8766000" />
       <workItem from="1590758205447" duration="4127000" />
-      <workItem from="1591031033310" duration="2311000" />
-      <workItem from="1591036542927" duration="930000" />
-      <workItem from="1591114499164" duration="7589000" />
+      <workItem from="1591031033310" duration="307000" />
     </task>
     <servers />
   </component>
@@ -201,10 +190,10 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="685" y="291" key="#Notifications/0.0.1600.860@0.0.1600.860" timestamp="1590679889511" />
-    <state x="635" y="352" key="NewPhpFileDialog" timestamp="1591117129368">
+    <state x="635" y="352" key="NewPhpFileDialog" timestamp="1590678591133">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="635" y="352" key="NewPhpFileDialog/0.0.1600.860@0.0.1600.860" timestamp="1591117129368" />
+    <state x="635" y="352" key="NewPhpFileDialog/0.0.1600.860@0.0.1600.860" timestamp="1590678591133" />
     <state x="301" y="60" key="SettingsEditor" timestamp="1590693926798">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
